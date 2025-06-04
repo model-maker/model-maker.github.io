@@ -22167,11 +22167,11 @@ if(a2.r)if(a2.a){k="\n    "+m
 j=a2.f
 i=j?e:""
 j=j?e:""
-l="\n"+(k+i+d+a0+"? {\n        guard let dictionary = value as? [String: Any] else {\n            return nil\n        }"+("\n        return "+a0+".deserialize(from: dictionary)\n    }"))+("\n"+(k+j+c+a0+"]? {\n        guard let array = value as? [Any] else {\n            return nil\n        }"+("\n        return ["+a0+"].deserialize(from: array)\n    }")))}else if(a2.Q){k="\n    "+m
+l="\n"+(k+i+d+a0+"? {\n        guard let dictionary = value as? [String: Any] else {return nil }"+("\n        return "+a0+".deserialize(from: dictionary)\n    }"))+("\n"+(k+j+c+a0+"]? {\n        guard let array = value as? [Any] else { return nil }"+("\n        return ["+a0+"].deserialize(from: array)\n    }")))}else if(a2.Q){k="\n    "+m
 j=a2.f
 i=j?e:""
 j=j?e:""
-l="\n"+(k+i+d+a0+"? {"+("\n        guard let dictionary = value as? [String: Any] else {\n            return nil\n        }\n        do {\n            let data = try JSONSerialization.data(withJSONObject: dictionary)\n            let res = try JSONDecoder().decode("+a0+".self, from: data)\n            return res\n        } catch {\n            return nil\n        }\n    }"))+("\n"+(k+j+c+a0+"]? {"+("\n        guard let array = value as? [Any] else {\n            return nil\n        }\n        do {\n            let data = try JSONSerialization.data(withJSONObject: array)\n            let res = try JSONDecoder().decode(["+a0+"].self, from: data)\n            return res\n        } catch {\n            return nil\n        }\n    }")))}a=a+r+s+q+o+n+l+"\n}"
+l="\n"+(k+i+d+a0+"? {"+("\n        guard let dictionary = value as? [String: Any] else { return nil }\n        guard let data = try? JSONSerialization.data(withJSONObject: dictionary) else { return nil }\n        return try? JSONDecoder().decode("+a0+".self, from: data)\n    }"))+("\n"+(k+j+c+a0+"]? {"+("\n        guard let array = value as? [Any] else { return nil }\n        guard let data = try? JSONSerialization.data(withJSONObject: array) else { return nil }\n        return try? JSONDecoder().decode(["+a0+"].self, from: data)\n    }")))}a=a+r+s+q+o+n+l+"\n}"
 for(a0=a1.e,s=a0.length,h=0;h<a0.length;a0.length===s||(0,A.y)(a0),++h){g=a0[h]
 if(g.r!=null)continue
 a+="\n\n"+A.alJ(g,a2)}return a},
