@@ -22207,9 +22207,9 @@ s+="\n        case "+n
 if(n!==o)s+=' = "'+o+'"'}s+="\n    }"
 m=s}r=a.f
 q=r.length
-if(q!==0){o=b.d?" ":"required"
-l=b.f?e:""
-k="\n\n    "+o+" "+l+"init(from decoder: any Decoder) throws {\n        let container = try decoder.container(keyedBy: CodingKeys.self)"
+if(q!==0){o=b.f?e:""
+l=b.d?"":"required "
+k="\n\n    "+o+l+"init(from decoder: any Decoder) throws {\n        let container = try decoder.container(keyedBy: CodingKeys.self)"
 for(p=0;p<r.length;r.length===q||(0,A.y)(r),++p){j=r[p]
 i=j.a
 n=A.nL(i)
