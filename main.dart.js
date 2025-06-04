@@ -22167,7 +22167,7 @@ if(a2.r)if(a2.a){k="\n    "+m
 j=a2.f
 i=j?e:""
 j=j?e:""
-l="\n"+(k+i+d+a0+"? {\n        guard let dictionary = value as? [String: Any] else {return nil }"+("\n        return "+a0+".deserialize(from: dictionary)\n    }"))+("\n"+(k+j+c+a0+"]? {\n        guard let array = value as? [Any] else { return nil }"+("\n        return ["+a0+"].deserialize(from: array)\n    }")))}else if(a2.Q){k="\n    "+m
+l="\n"+(k+i+d+a0+"? {\n        guard let dictionary = value as? [String: Any] else { return nil }"+("\n        return "+a0+".deserialize(from: dictionary)\n    }"))+("\n"+(k+j+c+a0+"]? {\n        guard let array = value as? [Any] else { return nil }"+("\n        return ["+a0+"].deserialize(from: array)\n    }")))}else if(a2.Q){k="\n    "+m
 j=a2.f
 i=j?e:""
 j=j?e:""
