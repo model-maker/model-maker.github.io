@@ -22137,8 +22137,8 @@ if(t.j.b(a)){s=J.bl(a)
 if(s.ga_(a)||s.gY(a)==null)return!0}return!1},
 alK(a,b,c){var s
 if(typeof b=="string")return"String"
-else if(typeof b=="number")return"Double"
 else if(A.oo(b))return"Int"
+else if(typeof b=="number")return"Double"
 else if(A.on(b))return"Bool"
 else{if(t.j.b(b)){s=J.bl(b)
 if(s.gbC(b))return A.alK(a,s.gY(b),c)}return c+A.an8(a)}},
